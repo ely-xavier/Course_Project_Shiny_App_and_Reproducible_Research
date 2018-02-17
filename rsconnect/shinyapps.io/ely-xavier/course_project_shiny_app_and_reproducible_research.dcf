@@ -1,0 +1,10 @@
+name: course_project_shiny_app_and_reproducible_research
+title:
+username:
+account: ely-xavier
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 283484
+bundleId: 1227204
+url: https://ely-xavier.shinyapps.io/course_project_shiny_app_and_reproducible_research/
+when: 1518839522.83604

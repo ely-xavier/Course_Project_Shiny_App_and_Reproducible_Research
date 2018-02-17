@@ -1,0 +1,55 @@
+<style type="text/css">
+
+.reveal pre code {
+  display: block; padding: 0.3em;
+  font-size: 1em;
+  
+</style>
+
+
+Power output prediction
+========================================================
+author: Ely 
+date: 02/14/2018
+autosize: true
+transition: rotate
+transition-speed: slow
+
+Overview
+========================================================
+This presentation contains documentation for the Power output prediction application. The application can be found [**here**] (https://ely-xavier.shinyapps.io/course_project_shiny_app_and_reproducible_research/)
+
+This application it is building a linear regression model using `Combined Cycle Power Plant` data set and is predicting the power output of a combined cycle power plant at full capacity depending on its Exhaust Vacuum (cm Hg).
+
+Builds a plot and gives predicted power output (in Mega Watts, MW).
+
+Data used
+========================================================
+
+The data used for this application is `CCPP` data set, which is part of `UIC Machine Learning Repository` [**here**] (http://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant)
+
+This dataset contains 9568 data points collected from a Combined Cycle Power Plant over 6 years (2006-2011), when the power plant was set to work with full load:
+
+```{r echo=FALSE}
+power<-read.csv("power_data.csv")
+summary(power)
+
+```
+
+Shiny files
+========================================================
+
+The application is build using Shiny package and the source code is in 2 files:
+- `ui.R`
+- `server.R`
+
+Both files can be found here: [GitHub repo](https://github.com/ely-xavier/Course_Project_Shiny_App_and_Reproducible_Research/tree/master)
+
+Application functionality
+========================================================
+
+The application is drawing plot of power in the `CCPP` data set distributed by their Exhaust Vacuum pressure (cm Hg) and power output (MW). The regression line is shown on the plot as well. 
+
+By selected the specific vacuum pressure the regression is recalculated based only on that feature. 
+
+Below the graph the predicted power output is shown.
